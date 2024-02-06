@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haru_warehouse/screen/home.dart';
 
 // ignore: must_be_immutable
 class Login extends StatelessWidget {
@@ -13,6 +14,7 @@ class Login extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         alignment: Alignment.topLeft,
         children: [
@@ -50,7 +52,7 @@ class Login extends StatelessWidget {
                   right: 35,
                   top: 35,
                 ),
-                child: Container(
+                child: SizedBox(
                   width: MediaQuery.of(context).size.width,
                   child: Form(
                     key: _formKey,
@@ -78,6 +80,10 @@ class Login extends StatelessWidget {
                                     16.0,
                                     20.0,
                                     16.0), // Adjust left and right padding as neededcontentPadding: EdgeInsets.fromLTRB(20.0, 16.0, 20.0, 16.0), // Adjust left and right padding as needed
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Color(0xffFF0000)),
+                                    borderRadius: BorderRadius.circular(35)),
                                 border: OutlineInputBorder(
                                     borderSide: const BorderSide(
                                       color: Color(0xffFF0000),
@@ -104,6 +110,10 @@ class Login extends StatelessWidget {
                                   16.0,
                                   20.0,
                                   16.0), // Adjust left and right padding as needed
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Color(0xffFF0000)),
+                                  borderRadius: BorderRadius.circular(35)),
                               border: OutlineInputBorder(
                                   borderSide: const BorderSide(
                                     color: Color(0xffFF0000),
@@ -120,16 +130,18 @@ class Login extends StatelessWidget {
                             decoration: BoxDecoration(
                                 color: const Color(0xffFF0000),
                                 borderRadius: BorderRadius.circular(35)),
-                            child: const Material(
+                            child: Material(
                               color: Colors.transparent,
                               child: InkWell(
-                                // onTap: () {
-                                //   Navigator.push(
-                                //       context,
-                                //       MaterialPageRoute(
-                                //           builder: (context) => Bnb()));
-                                // },
-                                child: Padding(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => Home(),
+                                    ),
+                                  );
+                                },
+                                child: const Padding(
                                   padding: EdgeInsets.all(16),
                                   child: Text(
                                     'Login',

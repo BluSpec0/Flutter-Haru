@@ -64,6 +64,13 @@ flutter:
     - images/LoginImage.png
     - images/TextLogin.png
     - images/BgLogin.png
+    - images/Account.png
+    - images/Bghome.png
+    - images/hometext.png
+    - images/Rectangle.png
+    - images/p1.png
+    - images/p2.png
+    - images/p3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
