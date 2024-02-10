@@ -154,13 +154,13 @@ class History extends StatelessWidget {
                           decoration: BoxDecoration(
                               boxShadow: [
                                 BoxShadow(
-                                    color: Colors.black.withOpacity(0.2),
-                                    offset: Offset(1, 4),
-                                    blurRadius: 2),
+                                    color: Colors.black.withOpacity(0.15),
+                                    offset: Offset(0, 5),
+                                    blurRadius: 8),
                                 BoxShadow(
-                                    color: Colors.black.withOpacity(0.2),
-                                    offset: Offset(-1, 0),
-                                    blurRadius: 2),
+                                    color: Colors.black.withOpacity(0.15),
+                                    offset: Offset(0, 4),
+                                    blurRadius: 7),
                               ],
                               color: color(index + 1),
                               borderRadius: BorderRadius.circular(8)),

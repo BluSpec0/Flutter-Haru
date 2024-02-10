@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:haru_warehouse/screen/history.dart';
 import 'package:haru_warehouse/screen/addproduct.dart';
+import 'package:haru_warehouse/screen/product.dart';
 
 // ignore: must_be_immutable
 class Home extends StatelessWidget {
@@ -146,7 +147,7 @@ class Home extends StatelessWidget {
                   cursorColor: Colors.black,
                   decoration: InputDecoration(
                       contentPadding:
-                          const EdgeInsets.fromLTRB(20.0, 16.0, 20.0, 16.0),
+                          const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
                       hintText: 'Search Here',
                       hintStyle: const TextStyle(
                         fontSize: 15,
@@ -181,14 +182,14 @@ class Home extends StatelessWidget {
                 itemBuilder: (context, index) {
                   var idx = index + 1;
                   return InkWell(
-                    // onTap: () {
-                    //   Navigator.push(
-                    //       context,
-                    //       MaterialPageRoute(
-                    //           builder: (context) => Produk(
-                    //                 id: idx.toString(),
-                    //               )));
-                    // },
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Product(),
+                        ),
+                      );
+                    },
                     child: Stack(
                       alignment: Alignment.bottomCenter,
                       children: [
