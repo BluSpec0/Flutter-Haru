@@ -1,14 +1,11 @@
 // ignore_for_file: unused_local_variable
-
 import 'package:flutter/material.dart';
-import 'package:haru_warehouse/screen/history.dart';
-import 'package:haru_warehouse/screen/addproduct.dart';
 
 // ignore: must_be_immutable
-class Home extends StatelessWidget {
+class Addproduct extends StatelessWidget {
   final TextEditingController _searchContoller = TextEditingController();
 
-  Home({super.key});
+  Addproduct({super.key});
 
   produk(index) {
     if (index == 1) {
@@ -17,6 +14,24 @@ class Home extends StatelessWidget {
       return const Text('Hoodie');
     } else if (index == 3) {
       return const Text('LongSleve');
+    } else if (index == 4) {
+      return const Text('T-Shirt');
+    } else if (index == 5) {
+      return const Text('Hoodie');
+    } else if (index == 6) {
+      return const Text('LongSleve');
+    } else if (index == 7) {
+      return const Text('T-Shirt');
+    } else if (index == 8) {
+      return const Text('Hoodie');
+    } else if (index == 9) {
+      return const Text('LongSleve');
+    } else if (index == 10) {
+      return const Text('T-Shirt');
+    } else if (index == 11) {
+      return const Text('Hoodie');
+    } else if (index == 12) {
+      return const Text('LongSleve');
     }
   }
 
@@ -24,29 +39,6 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(bottom: 10, right: 20),
-        child: FloatingActionButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => Addproduct(),
-              ),
-            );
-          },
-          backgroundColor: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius:
-                BorderRadius.circular(50), // Adjust the radius as needed
-          ),
-          child: const Icon(
-            Icons.add,
-            color: Color(0xffFF0000),
-            size: 40,
-          ),
-        ),
-      ),
       backgroundColor: Colors.white,
       appBar: AppBar(
         toolbarHeight: 65,
@@ -54,10 +46,10 @@ class Home extends StatelessWidget {
         backgroundColor: const Color(0xffFF0000),
         elevation: 8, // Set the elevation to control the drop shadow
         shadowColor: Colors.black,
-        title: Row(
+        title: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Column(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
@@ -78,22 +70,25 @@ class Home extends StatelessWidget {
                 ),
               ],
             ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => History(),
-                  ),
-                );
-              },
-              child: const Icon(
-                Icons.notifications_none_rounded,
-                color: Colors.white,
-                size: 28,
-              ),
-            ),
           ],
+        ),
+      ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(top: 120, left: 20),
+        child: Container(
+          alignment: Alignment.topLeft,
+          child: FloatingActionButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            child: const Icon(
+              Icons.arrow_back_rounded,
+              color: Color(0xffFFFFFF),
+              size: 30,
+            ),
+          ),
         ),
       ),
       body: Stack(
@@ -104,7 +99,7 @@ class Home extends StatelessWidget {
               Container(
                 alignment: Alignment.topCenter,
                 width: MediaQuery.of(context).size.width,
-                height: 270,
+                height: 205,
                 decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
@@ -136,7 +131,7 @@ class Home extends StatelessWidget {
                 child: Container(
                   alignment: Alignment.topCenter,
                   height: height / 8,
-                  child: Image.asset('images/hometext.png'),
+                  child: Image.asset('images/addtext.png'),
                 ),
               ),
               Padding(
@@ -171,24 +166,18 @@ class Home extends StatelessWidget {
               GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
-                itemCount: 3,
+                itemCount: 12,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+                  crossAxisCount: 3,
                   mainAxisSpacing: 0,
                   crossAxisSpacing: 0,
-                  childAspectRatio: 5 / 4.5,
                 ),
                 itemBuilder: (context, index) {
                   var idx = index + 1;
                   return InkWell(
-                    // onTap: () {
-                    //   Navigator.push(
-                    //       context,
-                    //       MaterialPageRoute(
-                    //           builder: (context) => Produk(
-                    //                 id: idx.toString(),
-                    //               )));
-                    // },
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                     child: Stack(
                       alignment: Alignment.bottomCenter,
                       children: [
@@ -197,23 +186,18 @@ class Home extends StatelessWidget {
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black.withOpacity(0.2),
-                                offset: Offset(0.5, 12),
+                                offset: Offset(0, 10),
                                 blurRadius: 8,
-                              ),
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.2),
-                                offset: Offset(-0.5, 0),
-                                blurRadius: 7,
                               ),
                             ],
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white,
                           ),
-                          width: 165,
-                          height: 150,
+                          width: 105,
+                          height: 110,
                           child: Padding(
                             padding: const EdgeInsets.only(
-                                top: 25, right: 25, left: 25, bottom: 35),
+                                top: 10, right: 10, left: 10, bottom: 25),
                             child: Image.asset('images/p${index + 1}.png'),
                           ),
                         ),
@@ -233,7 +217,7 @@ class Home extends StatelessWidget {
                         // Add the text widget here
                         Positioned(
                           child: Container(
-                              padding: const EdgeInsets.only(bottom: 8),
+                              padding: const EdgeInsets.only(bottom: 3.5),
                               child: produk(index + 1)),
                         ),
                       ],
