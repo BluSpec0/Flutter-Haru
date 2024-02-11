@@ -81,6 +81,8 @@ flutter:
     - images/p11.png
     - images/p12.png
     - images/tshirt.png
+    - images/tshirt2.png
+    - images/tshirt3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

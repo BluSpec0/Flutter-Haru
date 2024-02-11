@@ -1,10 +1,12 @@
 // ignore_for_file: unused_local_variable
 import 'package:flutter/material.dart';
-import 'package:haru_warehouse/screen/editproduct.dart';
 
 // ignore: must_be_immutable
-class Detailproduct extends StatelessWidget {
-  const Detailproduct({super.key});
+class Editproduct extends StatelessWidget {
+  final TextEditingController _nameContoller = TextEditingController();
+  final TextEditingController _priceContoller = TextEditingController();
+  final TextEditingController _sumContoller = TextEditingController();
+  Editproduct({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +62,7 @@ class Detailproduct extends StatelessWidget {
                 child: Container(
                   alignment: Alignment.topCenter,
                   child: const Text(
-                    'Lihat Produk',
+                    'Edit Produk',
                     style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 20,
@@ -80,7 +82,7 @@ class Detailproduct extends StatelessWidget {
                   child: Container(
                     alignment: Alignment.topCenter,
                     height: 208,
-                    child: Image.asset('images/tshirt2.png'),
+                    child: Image.asset('images/tshirt3.png'),
                   ),
                 ),
               ),
@@ -106,7 +108,7 @@ class Detailproduct extends StatelessWidget {
                       child: const Text(
                         'Kode Barang',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Color(0xffFFFFFF),
                           fontWeight: FontWeight.w400,
                           fontSize: 12,
                         ),
@@ -136,7 +138,7 @@ class Detailproduct extends StatelessWidget {
                           blurRadius: 6,
                         ),
                       ],
-                      color: const Color(0xffFFFFFF),
+                      color: const Color(0xffDFDFDF),
                     ),
                     child: const Padding(
                       padding: EdgeInsets.only(left: 10),
@@ -184,41 +186,44 @@ class Detailproduct extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    width: 360,
-                    height: 35,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.15),
-                          offset: const Offset(-2, 0),
-                          blurRadius: 3,
-                        ),
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.15),
-                          offset: const Offset(2, 4),
-                          blurRadius: 6,
-                        ),
-                      ],
-                      color: const Color(0xffFFFFFF),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: Text(
-                        'Kaos JKT48',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w400,
+              Padding(
+                padding: const EdgeInsets.only(left: 15, right: 15),
+                child: Container(
+                  height: 35,
+                  decoration: BoxDecoration(
+                    color: Color(0xffFFFFFF),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.15),
+                        offset: const Offset(-2, 3),
+                        blurRadius: 5,
+                      ),
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.15),
+                        offset: const Offset(2, 0),
+                        blurRadius: 5,
+                      ),
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 2.5),
+                    child: TextField(
+                      controller: _nameContoller,
+                      cursorColor: Colors.black,
+                      decoration: const InputDecoration(
+                        hintText:
+                            'Kaos JKT48', // Adjust the hint text according to your preference
+                        hintStyle: TextStyle(
                           fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff000000),
                         ),
+                        border: InputBorder.none,
                       ),
                     ),
                   ),
-                ],
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15, top: 15),
@@ -272,7 +277,7 @@ class Detailproduct extends StatelessWidget {
                           blurRadius: 6,
                         ),
                       ],
-                      color: const Color(0xffFFFFFF),
+                      color: const Color(0xffDFDFDF),
                     ),
                     child: const Padding(
                       padding: EdgeInsets.only(left: 10),
@@ -320,41 +325,44 @@ class Detailproduct extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    width: 360,
-                    height: 35,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.15),
-                          offset: const Offset(-2, 0),
-                          blurRadius: 3,
-                        ),
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.15),
-                          offset: const Offset(2, 4),
-                          blurRadius: 6,
-                        ),
-                      ],
-                      color: const Color(0xffFFFFFF),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: Text(
-                        'Rp. 150.000,00-',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w400,
+              Padding(
+                padding: const EdgeInsets.only(left: 15, right: 15),
+                child: Container(
+                  height: 35,
+                  decoration: BoxDecoration(
+                    color: Color(0xffFFFFFF),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.15),
+                        offset: const Offset(-2, 3),
+                        blurRadius: 5,
+                      ),
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.15),
+                        offset: const Offset(2, 0),
+                        blurRadius: 5,
+                      ),
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 2.5),
+                    child: TextField(
+                      controller: _priceContoller,
+                      cursorColor: Colors.black,
+                      decoration: const InputDecoration(
+                        hintText:
+                            'Rp.150.000,00-', // Adjust the hint text according to your preference
+                        hintStyle: TextStyle(
                           fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff000000),
                         ),
+                        border: InputBorder.none,
                       ),
                     ),
                   ),
-                ],
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15, top: 15),
@@ -388,41 +396,44 @@ class Detailproduct extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    width: 360,
-                    height: 35,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.15),
-                          offset: const Offset(-2, 0),
-                          blurRadius: 3,
-                        ),
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.15),
-                          offset: const Offset(2, 4),
-                          blurRadius: 6,
-                        ),
-                      ],
-                      color: const Color(0xffFFFFFF),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: Text(
-                        '48',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w400,
+              Padding(
+                padding: const EdgeInsets.only(left: 15, right: 15),
+                child: Container(
+                  height: 35,
+                  decoration: BoxDecoration(
+                    color: Color(0xffFFFFFF),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.15),
+                        offset: const Offset(-2, 3),
+                        blurRadius: 5,
+                      ),
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.15),
+                        offset: const Offset(2, 0),
+                        blurRadius: 5,
+                      ),
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 2.5),
+                    child: TextField(
+                      controller: _sumContoller,
+                      cursorColor: Colors.black,
+                      decoration: const InputDecoration(
+                        hintText:
+                            '48', // Adjust the hint text according to your preference
+                        hintStyle: TextStyle(
                           fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff000000),
                         ),
+                        border: InputBorder.none,
                       ),
                     ),
                   ),
-                ],
+                ),
               ),
               const SizedBox(height: 15),
               Row(
@@ -431,12 +442,7 @@ class Detailproduct extends StatelessWidget {
                   Container(
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Editproduct(),
-                          ),
-                        );
+                        Navigator.pop(context);
                       },
                       child: Container(
                         alignment: Alignment.center,
@@ -453,39 +459,7 @@ class Detailproduct extends StatelessWidget {
                             color: const Color(0xffFF0000),
                             borderRadius: BorderRadius.circular(25)),
                         child: const Text(
-                          'Edit',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 15,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 26),
-                  Container(
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: 122,
-                        height: 46,
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.15),
-                              offset: const Offset(-2, 4),
-                              blurRadius: 2,
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(25),
-                          color: const Color(0xffFF0000),
-                        ),
-                        child: const Text(
-                          'Hapus',
+                          'Save',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w400,

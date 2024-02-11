@@ -1,5 +1,6 @@
 // ignore_for_file: unused_local_variable
 import 'package:flutter/material.dart';
+import 'package:haru_warehouse/screen/createproduct.dart';
 import 'package:haru_warehouse/screen/detailproduct.dart';
 
 // ignore: must_be_immutable
@@ -54,7 +55,7 @@ class Product extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => Detailproduct(),
+                builder: (context) => Createproduct(),
               ),
             );
           },
